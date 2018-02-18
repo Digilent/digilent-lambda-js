@@ -1,0 +1,1 @@
+exports.DigilentLambdaJs = require('./dist/digilent-lambda-js').DigilentLambdaJs;

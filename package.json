@@ -1,23 +1,22 @@
 {
   "name": "@digilent/digilent-lambda-js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Digilent wrapper module for AWS Lambda",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine spec/core.js",
-    "prepublish": "npm run build",
     "clean": "rm -rf dist && rm -rf bundle",
-    "copyCss": "cp -f src/*.css ./bundle && cp -f src/*.css ./dist",
-    "ls": "ls -al ./src",
-    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/digilent-lambda-js.js && npm run copyCss"
+    "docs": "typedoc --out ./docs ./src",
+    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/digilent-lambda-js.js && npm run docs"
   },
   "author": "Digilent",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^7.0.12",
     "typescript": "2.0.10",
+    "uglify-js": "^3.0.28",
     "webpack": "^3.5.5",
-    "aws-sdk": "^2.104.0"
+    "aws-sdk": "^2.104.0",
+    "typedoc": "^0.9.0"
   },
   "dependencies": {}
 }
